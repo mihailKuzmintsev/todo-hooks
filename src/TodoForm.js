@@ -7,7 +7,7 @@ function TodoForm({ addTodo }) {
   const [value, handleChage, reset] = useInputState('');
 
   return (
-    <Paper>
+    <Paper style={{ margin: '1rem 0', padding: '0 1rem' }}>
       {value}
       <form
         onSubmit={e => {
@@ -16,7 +16,13 @@ function TodoForm({ addTodo }) {
           reset();
         }}
       >
-        <TextField value={value} onChange={handleChage} />
+        <TextField
+          value={value}
+          onChange={handleChage}
+          label="Add New Todo"
+          margin="normal"
+          fullWidth
+        />
       </form>
     </Paper>
   );
