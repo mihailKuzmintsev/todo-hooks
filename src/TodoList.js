@@ -5,10 +5,10 @@ import List from '@material-ui/core/List';
 import Todo from './Todo';
 
 function TodoList({ todos, removeTodo, toggleTodo, editTodo }) {
-  return (
+  return todos.length > 0 ? (
     <Paper>
       <List>
-        {todos.map(todo => (
+        {todos.map((todo, i) => (
           <>
             <Todo
               key={todo.id}
@@ -17,12 +17,12 @@ function TodoList({ todos, removeTodo, toggleTodo, editTodo }) {
               toggleTodo={toggleTodo}
               editTodo={editTodo}
             />
-            <Divider />
+            {i < todos.length - 1 && <Divider />}
           </>
         ))}
       </List>
     </Paper>
-  );
+  ) : null;
 }
 
 export default TodoList;
