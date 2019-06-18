@@ -8,7 +8,6 @@ function TodoForm({ addTodo }) {
 
   return (
     <Paper style={{ margin: '1rem 0', padding: '0 1rem' }}>
-      {value}
       <form
         onSubmit={e => {
           e.preventDefault();
