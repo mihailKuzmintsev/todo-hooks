@@ -12,7 +12,7 @@ function TodoList({ todos, removeTodo, toggleTodo, editTodo }) {
           <>
             <Todo
               key={todo.id}
-              todo={todo}
+              {...todo}
               removeTodo={removeTodo}
               toggleTodo={toggleTodo}
               editTodo={editTodo}
